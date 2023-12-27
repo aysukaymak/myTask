@@ -40,6 +40,8 @@
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.itemNav = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.accordionControlElementNewTask = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementNew = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
@@ -64,7 +66,7 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElementSearch,
-            this.accordionControlElementNewNote,
+            this.accordionControlElementNew,
             this.accordionControlElementNotes,
             this.accordionControlElementCalendar,
             this.accordionControlElementProfile});
@@ -95,7 +97,6 @@
             this.accordionControlElementNewNote.Appearance.Default.Options.UseFont = true;
             this.accordionControlElementNewNote.Expanded = true;
             this.accordionControlElementNewNote.Height = 50;
-            this.accordionControlElementNewNote.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElementNewNote.ImageOptions.SvgImage")));
             this.accordionControlElementNewNote.Name = "accordionControlElementNewNote";
             this.accordionControlElementNewNote.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementNewNote.Text = "New Note";
@@ -168,6 +169,27 @@
             this.itemNav});
             this.fluentFormDefaultManager1.MaxItemId = 1;
             // 
+            // accordionControlElementNewTask
+            // 
+            this.accordionControlElementNewTask.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.accordionControlElementNewTask.Appearance.Default.Options.UseFont = true;
+            this.accordionControlElementNewTask.Name = "accordionControlElementNewTask";
+            this.accordionControlElementNewTask.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementNewTask.Text = "New Task";
+            this.accordionControlElementNewTask.Click += new System.EventHandler(this.accordionControlElementNewTask_Click);
+            // 
+            // accordionControlElementNew
+            // 
+            this.accordionControlElementNew.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.accordionControlElementNew.Appearance.Default.Options.UseFont = true;
+            this.accordionControlElementNew.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElementNewNote,
+            this.accordionControlElementNewTask});
+            this.accordionControlElementNew.Expanded = true;
+            this.accordionControlElementNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement1.ImageOptions.SvgImage")));
+            this.accordionControlElementNew.Name = "accordionControlElementNew";
+            this.accordionControlElementNew.Text = "New";
+            // 
             // frmMain
             // 
             this.ActiveGlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
@@ -207,6 +229,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementCalendar;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementProfile;
         private DevExpress.XtraBars.BarStaticItem itemNav;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNew;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNewTask;
     }
 }
 

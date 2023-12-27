@@ -98,6 +98,12 @@
     <Compile Include="UI\Modules\ucNewNote.Designer.cs">
       <DependentUpon>ucNewNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Modules\ucNewTask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Modules\ucNewTask.Designer.cs">
+      <DependentUpon>ucNewTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Modules\ucNotes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Modules\ucNewNote.resx">
       <DependentUpon>ucNewNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Modules\ucNewTask.resx">
+      <DependentUpon>ucNewTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Modules\ucNotes.resx">
       <DependentUpon>ucNotes.cs</DependentUpon>

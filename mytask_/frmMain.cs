@@ -108,5 +108,15 @@ namespace mytask_
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucProfile"));
         }
+
+        private async void accordionControlElementNewTask_Click(object sender, EventArgs e)
+        {
+            this.itemNav.Caption = $"{accordionControlElementNewTask.Text}";
+            if (ModulesInfo.GetItem("ucNewTask") == null)
+            {
+                ModulesInfo.Add(new ModuleInfo("ucNewTask", "mytask_.UI.Modules.ucNewTask"));
+            }
+            await LoadModuleAsync(ModulesInfo.GetItem("ucNewTask"));
+        }
     }
 }
