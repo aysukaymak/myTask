@@ -32,11 +32,11 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.separatorControl3 = new DevExpress.XtraEditors.SeparatorControl();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxNote = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxHeader = new System.Windows.Forms.RichTextBox();
             this.separatorControl4 = new DevExpress.XtraEditors.SeparatorControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonSave = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -86,11 +86,11 @@
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.AutoSize = true;
             this.panelControl2.Controls.Add(this.separatorControl3);
-            this.panelControl2.Controls.Add(this.richTextBox3);
-            this.panelControl2.Controls.Add(this.richTextBox4);
+            this.panelControl2.Controls.Add(this.richTextBoxNote);
+            this.panelControl2.Controls.Add(this.richTextBoxHeader);
             this.panelControl2.Controls.Add(this.separatorControl4);
-            this.panelControl2.Controls.Add(this.simpleButton3);
-            this.panelControl2.Controls.Add(this.simpleButton4);
+            this.panelControl2.Controls.Add(this.buttonRefresh);
+            this.panelControl2.Controls.Add(this.buttonSave);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
@@ -114,33 +114,33 @@
             this.separatorControl3.Size = new System.Drawing.Size(1119, 23);
             this.separatorControl3.TabIndex = 6;
             // 
-            // richTextBox3
+            // richTextBoxNote
             // 
-            this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.richTextBoxNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox3.Location = new System.Drawing.Point(20, 189);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(1119, 535);
-            this.richTextBox3.TabIndex = 5;
-            this.richTextBox3.Text = "";
+            this.richTextBoxNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.richTextBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxNote.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxNote.Location = new System.Drawing.Point(20, 189);
+            this.richTextBoxNote.Name = "richTextBoxNote";
+            this.richTextBoxNote.Size = new System.Drawing.Size(1119, 535);
+            this.richTextBoxNote.TabIndex = 5;
+            this.richTextBoxNote.Text = "";
             // 
-            // richTextBox4
+            // richTextBoxHeader
             // 
-            this.richTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.richTextBoxHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.richTextBox4.Location = new System.Drawing.Point(20, 103);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(1119, 80);
-            this.richTextBox4.TabIndex = 4;
-            this.richTextBox4.Text = "Untitled Note";
+            this.richTextBoxHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.richTextBoxHeader.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxHeader.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            this.richTextBoxHeader.Location = new System.Drawing.Point(20, 103);
+            this.richTextBoxHeader.Name = "richTextBoxHeader";
+            this.richTextBoxHeader.Size = new System.Drawing.Size(1119, 80);
+            this.richTextBoxHeader.TabIndex = 4;
+            this.richTextBoxHeader.Text = "Untitled Note";
             // 
             // separatorControl4
             // 
@@ -153,34 +153,36 @@
             this.separatorControl4.Size = new System.Drawing.Size(1119, 23);
             this.separatorControl4.TabIndex = 3;
             // 
-            // simpleButton3
+            // buttonRefresh
             // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.simpleButton3.Appearance.Options.UseForeColor = true;
-            this.simpleButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton3.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.simpleButton3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
-            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.Location = new System.Drawing.Point(1019, 20);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton3.Size = new System.Drawing.Size(48, 48);
-            this.simpleButton3.TabIndex = 1;
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefresh.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buttonRefresh.Appearance.Options.UseForeColor = true;
+            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonRefresh.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
+            this.buttonRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonRefresh.ImageOptions.SvgImage")));
+            this.buttonRefresh.Location = new System.Drawing.Point(1019, 20);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonRefresh.Size = new System.Drawing.Size(48, 48);
+            this.buttonRefresh.TabIndex = 1;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // simpleButton4
+            // buttonSave
             // 
-            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.simpleButton4.Appearance.Options.UseForeColor = true;
-            this.simpleButton4.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.simpleButton4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
-            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(1091, 20);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton4.Size = new System.Drawing.Size(48, 48);
-            this.simpleButton4.TabIndex = 0;
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSave.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buttonSave.Appearance.Options.UseForeColor = true;
+            this.buttonSave.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
+            this.buttonSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonSave.ImageOptions.SvgImage")));
+            this.buttonSave.Location = new System.Drawing.Point(1091, 20);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonSave.Size = new System.Drawing.Size(48, 48);
+            this.buttonSave.TabIndex = 0;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // labelControl2
             // 
@@ -322,11 +324,11 @@
         private DevExpress.XtraEditors.SeparatorControl separatorControl2;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SeparatorControl separatorControl3;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox richTextBoxNote;
+        private System.Windows.Forms.RichTextBox richTextBoxHeader;
         private DevExpress.XtraEditors.SeparatorControl separatorControl4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton buttonRefresh;
+        private DevExpress.XtraEditors.SimpleButton buttonSave;
         private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
