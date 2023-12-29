@@ -34,7 +34,7 @@
             this.tileViewNotes = new DevExpress.XtraGrid.Views.Tile.TileView();
             this.labelNoteDate = new DevExpress.XtraEditors.LabelControl();
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxNote = new System.Windows.Forms.RichTextBox();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -54,7 +54,7 @@
             this.panelControl1.Controls.Add(this.gridControlNotes);
             this.panelControl1.Controls.Add(this.labelNoteDate);
             this.panelControl1.Controls.Add(this.separatorControl2);
-            this.panelControl1.Controls.Add(this.richTextBox2);
+            this.panelControl1.Controls.Add(this.richTextBoxNote);
             this.panelControl1.Controls.Add(this.separatorControl1);
             this.panelControl1.Controls.Add(this.simpleButton2);
             this.panelControl1.Controls.Add(this.simpleButton1);
@@ -89,6 +89,8 @@
             this.tileViewNotes.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tileViewNotes.OptionsTiles.Padding = new System.Windows.Forms.Padding(0);
             this.tileViewNotes.OptionsTiles.RowCount = 0;
+            this.tileViewNotes.ItemClick += new DevExpress.XtraGrid.Views.Tile.TileViewItemClickEventHandler(this.tileViewNotes_ItemClick);
+            this.tileViewNotes.GroupHeaderContextButtonClick += new DevExpress.XtraGrid.Views.Tile.GroupHeaderContextButtonClickEventHandler(this.tileViewNotes_GroupHeaderContextButtonClick);
             // 
             // labelNoteDate
             // 
@@ -115,19 +117,19 @@
             this.separatorControl2.Size = new System.Drawing.Size(671, 23);
             this.separatorControl2.TabIndex = 18;
             // 
-            // richTextBox2
+            // richTextBoxNote
             // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.richTextBoxNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox2.Location = new System.Drawing.Point(477, 161);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(671, 565);
-            this.richTextBox2.TabIndex = 17;
-            this.richTextBox2.Text = "";
+            this.richTextBoxNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.richTextBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxNote.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxNote.Location = new System.Drawing.Point(477, 161);
+            this.richTextBoxNote.Name = "richTextBoxNote";
+            this.richTextBoxNote.Size = new System.Drawing.Size(671, 565);
+            this.richTextBoxNote.TabIndex = 17;
+            this.richTextBoxNote.Text = "";
             // 
             // separatorControl1
             // 
@@ -207,7 +209,7 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SeparatorControl separatorControl2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBoxNote;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;

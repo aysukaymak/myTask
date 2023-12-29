@@ -20,6 +20,7 @@ namespace mytask_.UI.Modules
         }
 
         SqlConnection_ connection_ = new SqlConnection_();
+        ucNotes ucNotes = new ucNotes();   
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -31,6 +32,7 @@ namespace mytask_.UI.Modules
             save.Parameters.AddWithValue("@date",  (DateTime.Now).ToString("MM.dd.yyyy"));
             save.ExecuteNonQuery();
             connection_.Connection_().Close();
+            ucNotes.list_notes();
             refresh_items();
         }
 
