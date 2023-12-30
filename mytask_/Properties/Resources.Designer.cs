@@ -63,6 +63,16 @@ namespace mytask_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _92cbcb8a_d011_4708_a81c_6dade883b95b {
+            get {
+                object obj = ResourceManager.GetObject("92cbcb8a-d011-4708-a81c-6dade883b95b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9d74fc74_26b3_4473_b644_4d1ba991186c {
             get {
                 object obj = ResourceManager.GetObject("9d74fc74-26b3-4473-b644-4d1ba991186c", resourceCulture);
