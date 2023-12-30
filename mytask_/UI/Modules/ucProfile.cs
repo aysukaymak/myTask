@@ -1,8 +1,10 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Xpo.DB.Helpers;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,16 +21,32 @@ namespace mytask_.UI.Modules
             default_user_info();
         }
 
+        SqlConnection_ connection_ = new SqlConnection_();
+
         private void default_user_info()
         {
-            //change these values after database creation
-            //pictureEdit1. Image = ;
-            textName.Text = "username";
-            textSurname.Text = "surname";
-            textEmail.Text = "email";
-            textTelephone.Text = "00000000000";
-            textBirthday.Text = "00.00.2000";
-            textPassword.Text = "password";
+            try
+            {
+                SqlCommand command = new SqlCommand($"select id, first_name, last_name, phone, email, password, image, birthday from users where id = {1}", connection_.Connection_()); //change user_id value after completed users and login tables
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    textName.Text = reader["first_name"].ToString();
+                    //pictureEdit1. Image = ;
+                    textSurname.Text = reader["last_name"].ToString();
+                    textEmail.Text = reader["email"].ToString();
+                    textTelephone.Text = reader["phone"].ToString();
+                    textBirthday.Text = reader["birthday"].ToString();
+                    textPassword.Text = reader["password"].ToString();
+                    labelHeader.Text = reader["first_name"].ToString().ToUpper() + " " + reader["last_name"].ToString().ToUpper() + "'S MYTASK";
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void buttonProfileUpdate_CheckedChanged(object sender, EventArgs e)
