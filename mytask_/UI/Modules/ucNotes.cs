@@ -87,6 +87,7 @@ namespace mytask_.UI.Modules
 
         private void tileViewNotes_ItemClick(object sender, TileViewItemClickEventArgs e)
         {
+            set_enable_text(false);
             //when rows are clicked in tileview (when data is selected in the list), display data in related fields in the form
             display_data();
         }
