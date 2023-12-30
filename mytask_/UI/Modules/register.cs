@@ -16,5 +16,12 @@ namespace mytask_.UI.Modules
         {
             InitializeComponent();
         }
+
+        private void buttonBackToLogin_Click(object sender, EventArgs e)
+        {
+            login loginForm = new login();
+            this.Close();
+            loginForm.Show();
+        }
     }
 }
