@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +10,13 @@ using System.Windows.Forms;
 
 namespace mytask_.UI.Modules
 {
-    public partial class ucRegister : DevExpress.XtraEditors.XtraUserControl
+    public partial class login : Form
     {
-        public ucRegister()
+        public login()
         {
             InitializeComponent();
         }
+
+        
     }
 }
