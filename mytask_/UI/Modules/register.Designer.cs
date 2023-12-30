@@ -158,6 +158,7 @@
             this.buttonRegister.Size = new System.Drawing.Size(109, 42);
             this.buttonRegister.TabIndex = 31;
             this.buttonRegister.Text = "Register";
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // buttonBackToLogin
             // 
