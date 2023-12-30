@@ -168,14 +168,11 @@
     <EmbeddedResource Include="UI\Modules\ucProfile.resx">
       <DependentUpon>ucProfile.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="UI\Modules\ucSearch.resx">
-	  <DependentUpon>ucSearch.cs</DependentUpon>
-	</EmbeddedResource>
-    <EmbeddedResource Include="UI\Modules\ucRegister.resx">
-      <DependentUpon>ucRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Modules\ucSearch.resx">
       <DependentUpon>ucSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Modules\ucRegister.resx">
+      <DependentUpon>ucRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
