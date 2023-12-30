@@ -79,11 +79,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="myTask_dbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>myTask_dbDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SqlConnection_.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -180,17 +175,6 @@
       <DependentUpon>ucSearch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="myTask_dbDataSet.xsc">
-      <DependentUpon>myTask_dbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="myTask_dbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>myTask_dbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="myTask_dbDataSet.xss">
-      <DependentUpon>myTask_dbDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

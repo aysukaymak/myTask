@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.comboOrder = new System.Windows.Forms.ComboBox();
             this.labelOrderBy = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.headerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myTask_dbDataSet = new mytask_.myTask_dbDataSet();
-            this.notesTableAdapter = new mytask_.myTask_dbDataSetTableAdapters.notesTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,9 +43,8 @@
             this.textDate2 = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSearch = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myTask_dbDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboOrder
@@ -77,71 +71,29 @@
             this.labelOrderBy.TabIndex = 4;
             this.labelOrderBy.Text = "ORDER BY:";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.MediumAquamarine;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.headerDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.notesBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 238);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(931, 362);
-            this.dataGridView2.TabIndex = 7;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDDataGridViewTextBoxColumn.Width = 125;
             // 
             // headerDataGridViewTextBoxColumn
             // 
-            this.headerDataGridViewTextBoxColumn.DataPropertyName = "header";
-            this.headerDataGridViewTextBoxColumn.HeaderText = "header";
             this.headerDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.headerDataGridViewTextBoxColumn.Name = "headerDataGridViewTextBoxColumn";
             this.headerDataGridViewTextBoxColumn.Width = 125;
             // 
             // noteDataGridViewTextBoxColumn
             // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "note";
             this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            this.noteDataGridViewTextBoxColumn.Width = 500;
+            this.noteDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateDataGridViewTextBoxColumn
             // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // notesBindingSource
-            // 
-            this.notesBindingSource.DataMember = "notes";
-            this.notesBindingSource.DataSource = this.myTask_dbDataSet;
-            // 
-            // myTask_dbDataSet
-            // 
-            this.myTask_dbDataSet.DataSetName = "myTask_dbDataSet";
-            this.myTask_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // notesTableAdapter
-            // 
-            this.notesTableAdapter.ClearBeforeFill = true;
             // 
             // label2
             // 
@@ -235,6 +187,16 @@
             this.buttonSearch.TabIndex = 18;
             this.buttonSearch.Text = "Search Notes";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 214);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(928, 390);
+            this.dataGridView1.TabIndex = 19;
+            // 
             // ucSearch
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -242,6 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::mytask_.Properties.Resources._92cbcb8a_d011_4708_a81c_6dade883b95b;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textDate2);
@@ -251,14 +214,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.labelOrderBy);
             this.Controls.Add(this.comboOrder);
             this.Name = "ucSearch";
             this.Size = new System.Drawing.Size(976, 621);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myTask_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,10 +228,6 @@
 
         private System.Windows.Forms.ComboBox comboOrder;
         private System.Windows.Forms.Label labelOrderBy;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource notesBindingSource;
-        private myTask_dbDataSet myTask_dbDataSet;
-        private myTask_dbDataSetTableAdapters.notesTableAdapter notesTableAdapter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
@@ -285,5 +241,6 @@
         private System.Windows.Forms.MaskedTextBox textDate2;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.SimpleButton buttonSearch;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
