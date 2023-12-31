@@ -43,16 +43,19 @@
             this.textDate2 = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewNotes = new System.Windows.Forms.DataGridView();
+            this.checkASC = new System.Windows.Forms.CheckBox();
+            this.checkDESC = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
             this.SuspendLayout();
             // 
             // comboOrder
             // 
             this.comboOrder.FormattingEnabled = true;
             this.comboOrder.Items.AddRange(new object[] {
-            "ASC",
-            "DESC"});
+            "date",
+            "header\t",
+            "note"});
             this.comboOrder.Location = new System.Drawing.Point(155, 71);
             this.comboOrder.Name = "comboOrder";
             this.comboOrder.Size = new System.Drawing.Size(164, 25);
@@ -151,7 +154,7 @@
             // textDate1
             // 
             this.textDate1.Location = new System.Drawing.Point(551, 149);
-            this.textDate1.Mask = "00/00/0000";
+            this.textDate1.Mask = "00.00.0000";
             this.textDate1.Name = "textDate1";
             this.textDate1.Size = new System.Drawing.Size(83, 24);
             this.textDate1.TabIndex = 14;
@@ -160,7 +163,7 @@
             // textDate2
             // 
             this.textDate2.Location = new System.Drawing.Point(671, 149);
-            this.textDate2.Mask = "00/00/0000";
+            this.textDate2.Mask = "00.00.0000";
             this.textDate2.Name = "textDate2";
             this.textDate2.Size = new System.Drawing.Size(83, 24);
             this.textDate2.TabIndex = 15;
@@ -186,16 +189,44 @@
             this.buttonSearch.Size = new System.Drawing.Size(150, 39);
             this.buttonSearch.TabIndex = 18;
             this.buttonSearch.Text = "Search Notes";
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // dataGridView1
+            // dataGridViewNotes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 214);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(928, 390);
-            this.dataGridView1.TabIndex = 19;
+            this.dataGridViewNotes.AllowUserToOrderColumns = true;
+            this.dataGridViewNotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNotes.Location = new System.Drawing.Point(15, 214);
+            this.dataGridViewNotes.Name = "dataGridViewNotes";
+            this.dataGridViewNotes.RowHeadersWidth = 51;
+            this.dataGridViewNotes.RowTemplate.Height = 24;
+            this.dataGridViewNotes.Size = new System.Drawing.Size(928, 390);
+            this.dataGridViewNotes.TabIndex = 19;
+            // 
+            // checkASC
+            // 
+            this.checkASC.AutoSize = true;
+            this.checkASC.BackColor = System.Drawing.Color.Transparent;
+            this.checkASC.Checked = true;
+            this.checkASC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkASC.Location = new System.Drawing.Point(155, 110);
+            this.checkASC.Name = "checkASC";
+            this.checkASC.Size = new System.Drawing.Size(55, 21);
+            this.checkASC.TabIndex = 20;
+            this.checkASC.Text = "ASC";
+            this.checkASC.UseVisualStyleBackColor = false;
+            this.checkASC.CheckedChanged += new System.EventHandler(this.checkASC_CheckedChanged);
+            // 
+            // checkDESC
+            // 
+            this.checkDESC.AutoSize = true;
+            this.checkDESC.BackColor = System.Drawing.Color.Transparent;
+            this.checkDESC.Location = new System.Drawing.Point(254, 110);
+            this.checkDESC.Name = "checkDESC";
+            this.checkDESC.Size = new System.Drawing.Size(65, 21);
+            this.checkDESC.TabIndex = 21;
+            this.checkDESC.Text = "DESC";
+            this.checkDESC.UseVisualStyleBackColor = false;
+            this.checkDESC.CheckedChanged += new System.EventHandler(this.checkDESC_CheckedChanged);
             // 
             // ucSearch
             // 
@@ -204,7 +235,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::mytask_.Properties.Resources._92cbcb8a_d011_4708_a81c_6dade883b95b;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.checkDESC);
+            this.Controls.Add(this.checkASC);
+            this.Controls.Add(this.dataGridViewNotes);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textDate2);
@@ -218,7 +251,7 @@
             this.Controls.Add(this.comboOrder);
             this.Name = "ucSearch";
             this.Size = new System.Drawing.Size(976, 621);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +274,8 @@
         private System.Windows.Forms.MaskedTextBox textDate2;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.SimpleButton buttonSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewNotes;
+        private System.Windows.Forms.CheckBox checkASC;
+        private System.Windows.Forms.CheckBox checkDESC;
     }
 }
