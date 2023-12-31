@@ -36,7 +36,9 @@
             this.accordionControlElementNew = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementNewNote = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementNewTask = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementLists = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementNotes = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementTasks = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementCalendar = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementProfile = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
@@ -69,16 +71,15 @@
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElementSearch,
             this.accordionControlElementNew,
-            this.accordionControlElementNotes,
+            this.accordionControlElementLists,
             this.accordionControlElementCalendar,
             this.accordionControlElementProfile});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.LookAndFeel.SkinName = "Office 2019 Dark Gray";
             this.accordionControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(60, 714);
+            this.accordionControl1.Size = new System.Drawing.Size(312, 714);
             this.accordionControl1.TabIndex = 2;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -126,23 +127,42 @@
             this.accordionControlElementNewTask.Text = "New Task";
             this.accordionControlElementNewTask.Click += new System.EventHandler(this.accordionControlElementNewTask_Click);
             // 
-            // accordionControlElementNotes
+            // accordionControlElementLists
             // 
-            this.accordionControlElementNotes.AccessibleRole = System.Windows.Forms.AccessibleRole.List;
-            this.accordionControlElementNotes.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.accordionControlElementNotes.Appearance.Default.Options.UseFont = true;
-            this.accordionControlElementNotes.Expanded = true;
-            this.accordionControlElementNotes.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            this.accordionControlElementLists.AccessibleRole = System.Windows.Forms.AccessibleRole.List;
+            this.accordionControlElementLists.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.accordionControlElementLists.Appearance.Default.Options.UseFont = true;
+            this.accordionControlElementLists.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElementNotes,
+            this.accordionControlElementTasks});
+            this.accordionControlElementLists.Expanded = true;
+            this.accordionControlElementLists.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Left),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
-            this.accordionControlElementNotes.Height = 50;
-            this.accordionControlElementNotes.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElementNotes.ImageOptions.SvgImage")));
+            this.accordionControlElementLists.Height = 50;
+            this.accordionControlElementLists.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElementLists.ImageOptions.SvgImage")));
+            this.accordionControlElementLists.Name = "accordionControlElementLists";
+            this.accordionControlElementLists.Text = "View";
+            // 
+            // accordionControlElementNotes
+            // 
+            this.accordionControlElementNotes.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.accordionControlElementNotes.Appearance.Default.Options.UseFont = true;
             this.accordionControlElementNotes.Name = "accordionControlElementNotes";
             this.accordionControlElementNotes.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementNotes.Text = "Notes";
             this.accordionControlElementNotes.Click += new System.EventHandler(this.accordionControlElementNotes_Click);
+            // 
+            // accordionControlElementTasks
+            // 
+            this.accordionControlElementTasks.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.accordionControlElementTasks.Appearance.Default.Options.UseFont = true;
+            this.accordionControlElementTasks.Name = "accordionControlElementTasks";
+            this.accordionControlElementTasks.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementTasks.Text = "Tasks";
+            this.accordionControlElementTasks.Click += new System.EventHandler(this.accordionControlElementTasks_Click);
             // 
             // accordionControlElementCalendar
             // 
@@ -228,12 +248,14 @@
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementSearch;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNewNote;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNotes;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementLists;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementCalendar;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementProfile;
         private DevExpress.XtraBars.BarStaticItem itemNav;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNew;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNewTask;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNotes;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementTasks;
     }
 }
 

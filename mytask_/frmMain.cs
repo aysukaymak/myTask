@@ -63,7 +63,7 @@ namespace mytask_
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.fluentDesignFormContainer1.Controls.Add(new ucNotes() { Dock = DockStyle.Fill });
-            this.itemNav.Caption = $"{accordionControlElementNotes.Text}";
+            this.itemNav.Caption = $"{accordionControlElementLists.Text}";
         }
 
         private async void accordionControlElementSearch_Click(object sender, EventArgs e)
@@ -86,15 +86,6 @@ namespace mytask_
             await LoadModuleAsync(ModulesInfo.GetItem("ucNewNote"));
         }
 
-        private async void accordionControlElementNotes_Click(object sender, EventArgs e)
-        {
-            this.itemNav.Caption = $"{accordionControlElementNotes.Text}";
-            if (ModulesInfo.GetItem("ucNotes") == null)
-            {
-                ModulesInfo.Add(new ModuleInfo("ucNotes", "mytask_.UI.Modules.ucNotes"));
-            }
-            await LoadModuleAsync(ModulesInfo.GetItem("ucNotes"));
-        }
 
         private async void accordionControlElementCalendar_Click(object sender, EventArgs e)
         {
@@ -124,6 +115,26 @@ namespace mytask_
                 ModulesInfo.Add(new ModuleInfo("ucNewTask", "mytask_.UI.Modules.ucNewTask"));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucNewTask"));
+        }
+
+        private async void accordionControlElementTasks_Click(object sender, EventArgs e)
+        {
+            this.itemNav.Caption = $"{accordionControlElementTasks.Text}";
+            if (ModulesInfo.GetItem("ucTasks") == null)
+            {
+                ModulesInfo.Add(new ModuleInfo("ucTasks", "mytask_.UI.Modules.ucTasks"));
+            }
+            await LoadModuleAsync(ModulesInfo.GetItem("ucTasks"));
+        }
+
+        private async void accordionControlElementNotes_Click(object sender, EventArgs e)
+        {
+            this.itemNav.Caption = $"{accordionControlElementLists.Text}";
+            if (ModulesInfo.GetItem("ucNotes") == null)
+            {
+                ModulesInfo.Add(new ModuleInfo("ucNotes", "mytask_.UI.Modules.ucNotes"));
+            }
+            await LoadModuleAsync(ModulesInfo.GetItem("ucNotes"));
         }
     }
 }
