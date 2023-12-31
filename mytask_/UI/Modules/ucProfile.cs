@@ -9,14 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.XtraEditors.Mask.MaskSettings;
 
 namespace mytask_.UI.Modules
 {
     public partial class ucProfile : DevExpress.DXperience.Demos.TutorialControlBase
     {
-        public ucProfile()
+        public int userId;
+        public ucProfile(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
             default_user_info();
         }
 

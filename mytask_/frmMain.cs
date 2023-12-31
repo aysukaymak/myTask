@@ -63,6 +63,12 @@ namespace mytask_
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.fluentDesignFormContainer1.Controls.Add(new ucNotes(userId) { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucNewNote(userId) { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucNewTask(userId) { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucProfile(userId) { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucSearch(userId) { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucTasks(userId) { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucCalendar(userId) { Dock = DockStyle.Fill });
             this.itemNav.Caption = $"{accordionControlElementLists.Text}";
         }
 

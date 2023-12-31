@@ -13,14 +13,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.XtraEditors.Mask.MaskSettings;
 
 namespace mytask_.UI.Modules
 {
     public partial class ucCalendar : DevExpress.DXperience.Demos.TutorialControlBase
     {
-        public ucCalendar()
+        public int userId;
+        public ucCalendar(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
             list_tasks(); //when form is opened, list notes in tileview
             scheduler_settings(); //tileview design settings
             //set_initial_texts(); //display first row details in tileview, details are displayed in header, date and note fields of form

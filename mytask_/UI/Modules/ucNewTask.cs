@@ -10,14 +10,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.XtraEditors.Mask.MaskSettings;
 
 namespace mytask_.UI.Modules
 {
     public partial class ucNewTask : DevExpress.DXperience.Demos.TutorialControlBase
     {
-        public ucNewTask()
+        public int userId;
+        public ucNewTask(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
             dateEditStart.Text = DateTime.Now.ToString("MM.dd.yyyy");
             dateEditEnd.Text = DateTime.Now.ToString("MM.dd.yyyy");
         }

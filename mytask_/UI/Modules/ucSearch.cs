@@ -17,10 +17,12 @@ namespace mytask_.UI.Modules
     {
 
         string orderByColumn;
-        public ucSearch()
+        public int userId;
+        public ucSearch(int userId)
         {
             InitializeComponent();
             InitDefaultTexts();
+            this.userId = userId;
         }
 
         public void InitDefaultTexts()

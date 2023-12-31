@@ -9,14 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.XtraEditors.Mask.MaskSettings;
 
 namespace mytask_.UI.Modules
 {
     public partial class ucNewNote : DevExpress.DXperience.Demos.TutorialControlBase
     {
-        public ucNewNote()
+        public int userId;
+        public ucNewNote(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
         }
 
         SqlConnection_ connection_ = new SqlConnection_();

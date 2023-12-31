@@ -16,9 +16,11 @@ namespace mytask_.UI.Modules
 {
     public partial class ucTasks : DevExpress.DXperience.Demos.TutorialControlBase
     {
-        public ucTasks()
+        public int userId;
+        public ucTasks(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
             list_task(); //when form is opened, list notes in tileview
             tile_settings(); //tileview design settings
             set_initial_texts(); //display first row details in tileview, details are displayed in header, date and note fields of form
