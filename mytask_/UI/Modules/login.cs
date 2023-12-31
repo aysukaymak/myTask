@@ -33,11 +33,13 @@ namespace mytask_.UI.Modules
                 return;
             }
 
-            bool isAuthenticated = AuthenticateUser(email, password);
+            bool isAuthenticated = AuthenticateUser(email, password) > 0 ;
 
             if (isAuthenticated)
             {
                 MessageBox.Show("Login Success!","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                int userId = AuthenticateUser(email, password);
+                RedirectUserToMainPage(userId);
             }
             else
             {
@@ -45,7 +47,14 @@ namespace mytask_.UI.Modules
             }
         }
 
-        private bool AuthenticateUser(string email, string password)
+        private void RedirectUserToMainPage(int userId)
+        {
+            frmMain mainForm = new frmMain(userId);
+            this.Hide();
+            mainForm.Show();
+        }
+
+        private int AuthenticateUser(string email, string password)
         {
             try
             {
@@ -53,17 +62,17 @@ namespace mytask_.UI.Modules
                 {
                     connection_.Connection_();
 
-                    string query = "SELECT COUNT(*) FROM users WHERE email = @Email AND password = @Password";
+                    string query = "SELECT id FROM users WHERE email = @Email AND password = @Password";
                     //BURAYA BAK
                     using (SqlCommand command = new SqlCommand(query, connection_.Connection_()))
                     {
                         command.Parameters.AddWithValue("@email", email);
                         command.Parameters.AddWithValue("@password", password);
 
-                        // eğer bir değer dönerse olumlu sonuçtur COUNT(*)
-                        int count = (int)command.ExecuteScalar();
+                        // eğer sonuc dönmezse null'dır dönerse null değildir ID değeridir
+                        object userID = command.ExecuteScalar();
 
-                        return count > 0; //if bigger than 0 user is authenticated
+                        return (userID != null) ? Convert.ToInt32(userID) : -1 ;    
 
                     }
                     
@@ -72,7 +81,7 @@ namespace mytask_.UI.Modules
             catch (Exception ex)  
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error) ;
-                return false;
+                return -1;
             }
             
         }
