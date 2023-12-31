@@ -50,7 +50,7 @@ namespace mytask_.UI.Modules
                                                    $"union " +
                                                    $"select id, header, task as content, start_date, end_date " +
                                                    $"from tasks " +
-                                                   $"where user_id = {1}", connection_.Connection_()); //change user_id value after completed users and login tables
+                                                   $"where user_id = {userId}", connection_.Connection_()); //change user_id value after completed users and login tables
             da.Fill(dt);
             
             schedulerControl1.DataStorage.Appointments.DataSource = dt;

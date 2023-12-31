@@ -31,7 +31,7 @@ namespace mytask_.UI.Modules
         {
             SqlCommand save = new SqlCommand("insert into tasks (user_id, header, task, start_date, end_date) " +
                                  "values (@user_id, @header, @task, @start_date, @end_date)", connection_.Connection_());
-            save.Parameters.AddWithValue("@user_id", 1);
+            save.Parameters.AddWithValue("@user_id", userId);
             save.Parameters.AddWithValue("@header", richTextBoxHeader.Text);
             save.Parameters.AddWithValue("@task", richTextBoxTask.Text);
             save.Parameters.AddWithValue("@start_date", DateTime.Parse(dateEditStart.Text));

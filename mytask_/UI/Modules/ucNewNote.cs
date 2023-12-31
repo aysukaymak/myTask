@@ -28,7 +28,7 @@ namespace mytask_.UI.Modules
         {
             SqlCommand save = new SqlCommand("insert into notes (user_id, header, note, date) " +
                                              "values (@user_id, @header, @note, @date)", connection_.Connection_());
-            save.Parameters.AddWithValue("@user_id", 1);
+            save.Parameters.AddWithValue("@user_id", userId);
             save.Parameters.AddWithValue("@header", richTextBoxHeader.Text);
             save.Parameters.AddWithValue("@note", richTextBoxNote.Text);
             save.Parameters.AddWithValue("@date",  (DateTime.Now).ToString("MM.dd.yyyy"));
