@@ -62,7 +62,7 @@ namespace mytask_
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.fluentDesignFormContainer1.Controls.Add(new ucNotes() { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucNotes(userId) { Dock = DockStyle.Fill });
             this.itemNav.Caption = $"{accordionControlElementLists.Text}";
         }
 
@@ -71,7 +71,7 @@ namespace mytask_
             this.itemNav.Caption = $"{accordionControlElementSearch.Text}";
             if (ModulesInfo.GetItem("ucSearch") == null)
             {
-                ModulesInfo.Add(new ModuleInfo("ucSearch", "mytask_.UI.Modules.ucSearch"));
+                ModulesInfo.Add(new ModuleInfo("ucSearch", "mytask_.UI.Modules.ucSearch", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucSearch"));
         }
@@ -81,7 +81,7 @@ namespace mytask_
             this.itemNav.Caption = $"{accordionControlElementNewNote.Text}";
             if (ModulesInfo.GetItem("ucNewNote") == null)
             {
-                ModulesInfo.Add(new ModuleInfo("ucNewNote", "mytask_.UI.Modules.ucNewNote"));
+                ModulesInfo.Add(new ModuleInfo("ucNewNote", "mytask_.UI.Modules.ucNewNote", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucNewNote"));
         }
@@ -92,7 +92,7 @@ namespace mytask_
             this.itemNav.Caption = $"{accordionControlElementCalendar.Text}";
             if (ModulesInfo.GetItem("ucCalendar") == null)
             {
-                ModulesInfo.Add(new ModuleInfo("ucCalendar", "mytask_.UI.Modules.ucCalendar"));
+                ModulesInfo.Add(new ModuleInfo("ucCalendar", "mytask_.UI.Modules.ucCalendar", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucCalendar"));
         }
@@ -102,7 +102,7 @@ namespace mytask_
             this.itemNav.Caption = $"{accordionControlElementProfile.Text}";
             if (ModulesInfo.GetItem("ucProfile") == null)
             {
-                ModulesInfo.Add(new ModuleInfo("ucProfile", "mytask_.UI.Modules.ucProfile"));
+                ModulesInfo.Add(new ModuleInfo("ucProfile", "mytask_.UI.Modules.ucProfile", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucProfile"));
         }
@@ -112,7 +112,7 @@ namespace mytask_
             this.itemNav.Caption = $"{accordionControlElementNewTask.Text}";
             if (ModulesInfo.GetItem("ucNewTask") == null)
             {
-                ModulesInfo.Add(new ModuleInfo("ucNewTask", "mytask_.UI.Modules.ucNewTask"));
+                ModulesInfo.Add(new ModuleInfo("ucNewTask", "mytask_.UI.Modules.ucNewTask", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucNewTask"));
         }
@@ -122,7 +122,7 @@ namespace mytask_
             this.itemNav.Caption = $"{accordionControlElementTasks.Text}";
             if (ModulesInfo.GetItem("ucTasks") == null)
             {
-                ModulesInfo.Add(new ModuleInfo("ucTasks", "mytask_.UI.Modules.ucTasks"));
+                ModulesInfo.Add(new ModuleInfo("ucTasks", "mytask_.UI.Modules.ucTasks", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucTasks"));
         }
@@ -132,7 +132,7 @@ namespace mytask_
             this.itemNav.Caption = $"{accordionControlElementLists.Text}";
             if (ModulesInfo.GetItem("ucNotes") == null)
             {
-                ModulesInfo.Add(new ModuleInfo("ucNotes", "mytask_.UI.Modules.ucNotes"));
+                ModulesInfo.Add(new ModuleInfo("ucNotes", "mytask_.UI.Modules.ucNotes", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucNotes"));
         }

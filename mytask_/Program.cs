@@ -18,7 +18,7 @@ namespace mytask_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain(1));
+            Application.Run(new frmMain(50));
             //Application.Run(new login());
         }
     }
