@@ -15,10 +15,17 @@ namespace mytask_
 {
     public partial class frmMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        public frmMain()
+
+        private int userId;
+        public frmMain(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
         }
+        //get for userId
+        public int getUserId () { return userId; }
+
+        
 
 
         async Task LoadModuleAsync(ModuleInfo module)

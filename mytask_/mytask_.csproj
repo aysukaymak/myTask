@@ -93,11 +93,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Modules\ucLogin.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="UI\Modules\login.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Modules\ucLogin.Designer.cs">
-      <DependentUpon>ucLogin.cs</DependentUpon>
+    <Compile Include="UI\Modules\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Modules\register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Modules\register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Modules\ucCalendar.cs">
       <SubType>UserControl</SubType>
@@ -129,12 +135,6 @@
     <Compile Include="UI\Modules\ucProfile.Designer.cs">
       <DependentUpon>ucProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Modules\ucRegister.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Modules\ucRegister.Designer.cs">
-      <DependentUpon>ucRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Modules\ucSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,8 +156,16 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Modules\ucLogin.resx">
-      <DependentUpon>ucLogin.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Modules\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Modules\register.resx">
+      <DependentUpon>register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Modules\ucCalendar.resx">
       <DependentUpon>ucCalendar.cs</DependentUpon>
@@ -176,12 +184,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Modules\ucSearch.resx">
       <DependentUpon>ucSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Modules\ucRegister.resx">
-      <DependentUpon>ucRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Modules\ucTasks.resx">
-      <DependentUpon>ucTasks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
