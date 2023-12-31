@@ -139,6 +139,7 @@
             this.Controls.Add(this.panelControl1);
             this.MinimumSize = new System.Drawing.Size(540, 500);
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyNote - Login";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

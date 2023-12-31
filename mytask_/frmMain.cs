@@ -22,6 +22,10 @@ namespace mytask_
             InitializeComponent();
             this.userId = userId;
         }
+        //get for userId
+        public int getUserId () { return userId; }
+
+        
 
 
         async Task LoadModuleAsync(ModuleInfo module)

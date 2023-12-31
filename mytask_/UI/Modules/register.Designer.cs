@@ -51,6 +51,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImage = ((System.Drawing.Image)(resources.GetObject("panelControl1.ContentImage")));
             this.panelControl1.Controls.Add(this.textTelephone);
             this.panelControl1.Controls.Add(this.textBirthday);
@@ -230,6 +231,7 @@
             this.Controls.Add(this.panelControl1);
             this.MinimumSize = new System.Drawing.Size(800, 720);
             this.Name = "register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyNote - Register";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
