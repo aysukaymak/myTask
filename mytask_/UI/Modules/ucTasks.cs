@@ -16,9 +16,11 @@ namespace mytask_.UI.Modules
 {
     public partial class ucTasks : DevExpress.DXperience.Demos.TutorialControlBase
     {
-        public ucTasks()
+        public int userId;
+        public ucTasks(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
             list_task(); //when form is opened, list notes in tileview
             tile_settings(); //tileview design settings
             set_initial_texts(); //display first row details in tileview, details are displayed in header, date and note fields of form
@@ -156,7 +158,7 @@ namespace mytask_.UI.Modules
             //this function getting datas from note table and fills gridControlNotes(tileView) with these datas
             //i.e. just setting the datasource for tileview(notes list)
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter($"select id, header, task, start_date, end_date from tasks where user_id = {1} order by start_date desc", connection_.Connection_()); //change user_id value after completed users and login tables
+            SqlDataAdapter da = new SqlDataAdapter($"select id, header, task, start_date, end_date from tasks where user_id = {userId} order by start_date desc", connection_.Connection_()); //change user_id value after completed users and login tables
             da.Fill(dt);
             gridControlTasks.DataSource = dt;
         }
