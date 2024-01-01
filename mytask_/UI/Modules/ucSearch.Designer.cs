@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboOrder = new System.Windows.Forms.ComboBox();
             this.labelOrderBy = new System.Windows.Forms.Label();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.headerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,20 +45,10 @@
             this.dataGridViewNotes = new System.Windows.Forms.DataGridView();
             this.checkASC = new System.Windows.Forms.CheckBox();
             this.checkDESC = new System.Windows.Forms.CheckBox();
+            this.comboOrder = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboOrder.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboOrder
-            // 
-            this.comboOrder.FormattingEnabled = true;
-            this.comboOrder.Items.AddRange(new object[] {
-            "date",
-            "header\t",
-            "note"});
-            this.comboOrder.Location = new System.Drawing.Point(155, 71);
-            this.comboOrder.Name = "comboOrder";
-            this.comboOrder.Size = new System.Drawing.Size(164, 25);
-            this.comboOrder.TabIndex = 2;
             // 
             // labelOrderBy
             // 
@@ -68,11 +57,11 @@
             this.labelOrderBy.AutoSize = true;
             this.labelOrderBy.BackColor = System.Drawing.Color.Transparent;
             this.labelOrderBy.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelOrderBy.Location = new System.Drawing.Point(28, 72);
+            this.labelOrderBy.Location = new System.Drawing.Point(20, 20);
             this.labelOrderBy.Name = "labelOrderBy";
-            this.labelOrderBy.Size = new System.Drawing.Size(110, 24);
+            this.labelOrderBy.Size = new System.Drawing.Size(95, 24);
             this.labelOrderBy.TabIndex = 4;
-            this.labelOrderBy.Text = "ORDER BY:";
+            this.labelOrderBy.Text = "Order By:";
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -105,7 +94,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label2.Location = new System.Drawing.Point(392, 68);
+            this.label2.Location = new System.Drawing.Point(372, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 8;
@@ -118,7 +107,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label3.Location = new System.Drawing.Point(28, 149);
+            this.label3.Location = new System.Drawing.Point(20, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 24);
             this.label3.TabIndex = 9;
@@ -131,7 +120,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label4.Location = new System.Drawing.Point(390, 149);
+            this.label4.Location = new System.Drawing.Point(372, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 24);
             this.label4.TabIndex = 10;
@@ -139,76 +128,108 @@
             // 
             // textKeywords
             // 
-            this.textKeywords.Location = new System.Drawing.Point(155, 149);
+            this.textKeywords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.textKeywords.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textKeywords.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.textKeywords.Location = new System.Drawing.Point(138, 130);
             this.textKeywords.Name = "textKeywords";
-            this.textKeywords.Size = new System.Drawing.Size(162, 24);
+            this.textKeywords.Size = new System.Drawing.Size(162, 25);
             this.textKeywords.TabIndex = 12;
             // 
             // textHeader
             // 
-            this.textHeader.Location = new System.Drawing.Point(495, 68);
+            this.textHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.textHeader.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textHeader.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.textHeader.Location = new System.Drawing.Point(482, 21);
             this.textHeader.Name = "textHeader";
-            this.textHeader.Size = new System.Drawing.Size(162, 24);
+            this.textHeader.Size = new System.Drawing.Size(162, 25);
             this.textHeader.TabIndex = 13;
             // 
             // textDate1
             // 
-            this.textDate1.Location = new System.Drawing.Point(551, 149);
+            this.textDate1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textDate1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.textDate1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textDate1.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.textDate1.Location = new System.Drawing.Point(542, 129);
             this.textDate1.Mask = "00.00.0000";
             this.textDate1.Name = "textDate1";
-            this.textDate1.Size = new System.Drawing.Size(83, 24);
+            this.textDate1.Size = new System.Drawing.Size(122, 25);
             this.textDate1.TabIndex = 14;
             this.textDate1.ValidatingType = typeof(System.DateTime);
             // 
             // textDate2
             // 
-            this.textDate2.Location = new System.Drawing.Point(671, 149);
+            this.textDate2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textDate2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.textDate2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textDate2.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.textDate2.Location = new System.Drawing.Point(693, 129);
             this.textDate2.Mask = "00.00.0000";
             this.textDate2.Name = "textDate2";
-            this.textDate2.Size = new System.Drawing.Size(83, 24);
+            this.textDate2.Size = new System.Drawing.Size(122, 25);
             this.textDate2.TabIndex = 15;
             this.textDate2.ValidatingType = typeof(System.DateTime);
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 16F);
-            this.label6.Location = new System.Drawing.Point(640, 142);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label6.Location = new System.Drawing.Point(670, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 33);
+            this.label6.Size = new System.Drawing.Size(17, 24);
             this.label6.TabIndex = 17;
             this.label6.Text = "-";
             // 
             // buttonSearch
             // 
+            this.buttonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSearch.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.buttonSearch.Appearance.BorderColor = System.Drawing.Color.Transparent;
             this.buttonSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.buttonSearch.Appearance.Options.UseBackColor = true;
             this.buttonSearch.Appearance.Options.UseFont = true;
-            this.buttonSearch.Location = new System.Drawing.Point(793, 92);
+            this.buttonSearch.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonSearch.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.buttonSearch.ImageOptions.SvgImage = global::mytask_.Properties.Resources.Search;
+            this.buttonSearch.Location = new System.Drawing.Point(1074, 21);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(150, 39);
+            this.buttonSearch.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonSearch.Size = new System.Drawing.Size(60, 60);
             this.buttonSearch.TabIndex = 18;
-            this.buttonSearch.Text = "Search Notes";
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // dataGridViewNotes
             // 
             this.dataGridViewNotes.AllowUserToOrderColumns = true;
+            this.dataGridViewNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewNotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewNotes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewNotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNotes.Location = new System.Drawing.Point(15, 214);
+            this.dataGridViewNotes.Location = new System.Drawing.Point(3, 214);
             this.dataGridViewNotes.Name = "dataGridViewNotes";
             this.dataGridViewNotes.RowHeadersWidth = 51;
             this.dataGridViewNotes.RowTemplate.Height = 24;
-            this.dataGridViewNotes.Size = new System.Drawing.Size(928, 390);
+            this.dataGridViewNotes.Size = new System.Drawing.Size(1159, 530);
             this.dataGridViewNotes.TabIndex = 19;
             // 
             // checkASC
             // 
+            this.checkASC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.checkASC.AutoSize = true;
             this.checkASC.BackColor = System.Drawing.Color.Transparent;
             this.checkASC.Checked = true;
             this.checkASC.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkASC.Location = new System.Drawing.Point(155, 110);
+            this.checkASC.Location = new System.Drawing.Point(138, 68);
             this.checkASC.Name = "checkASC";
             this.checkASC.Size = new System.Drawing.Size(55, 21);
             this.checkASC.TabIndex = 20;
@@ -218,9 +239,11 @@
             // 
             // checkDESC
             // 
+            this.checkDESC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.checkDESC.AutoSize = true;
             this.checkDESC.BackColor = System.Drawing.Color.Transparent;
-            this.checkDESC.Location = new System.Drawing.Point(254, 110);
+            this.checkDESC.Location = new System.Drawing.Point(226, 68);
             this.checkDESC.Name = "checkDESC";
             this.checkDESC.Size = new System.Drawing.Size(65, 21);
             this.checkDESC.TabIndex = 21;
@@ -228,13 +251,35 @@
             this.checkDESC.UseVisualStyleBackColor = false;
             this.checkDESC.CheckedChanged += new System.EventHandler(this.checkDESC_CheckedChanged);
             // 
+            // comboOrder
+            // 
+            this.comboOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboOrder.Location = new System.Drawing.Point(138, 18);
+            this.comboOrder.Name = "comboOrder";
+            this.comboOrder.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.comboOrder.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.comboOrder.Properties.Appearance.Options.UseBackColor = true;
+            this.comboOrder.Properties.Appearance.Options.UseFont = true;
+            this.comboOrder.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.comboOrder.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboOrder.Properties.Items.AddRange(new object[] {
+            "date",
+            "header\t",
+            "note"});
+            this.comboOrder.Size = new System.Drawing.Size(125, 28);
+            this.comboOrder.TabIndex = 22;
+            // 
             // ucSearch
             // 
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::mytask_.Properties.Resources._92cbcb8a_d011_4708_a81c_6dade883b95b;
+            this.Controls.Add(this.comboOrder);
             this.Controls.Add(this.checkDESC);
             this.Controls.Add(this.checkASC);
             this.Controls.Add(this.dataGridViewNotes);
@@ -248,18 +293,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelOrderBy);
-            this.Controls.Add(this.comboOrder);
             this.Name = "ucSearch";
-            this.Size = new System.Drawing.Size(976, 621);
+            this.Size = new System.Drawing.Size(1165, 747);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboOrder.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboOrder;
         private System.Windows.Forms.Label labelOrderBy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -277,5 +320,6 @@
         private System.Windows.Forms.DataGridView dataGridViewNotes;
         private System.Windows.Forms.CheckBox checkASC;
         private System.Windows.Forms.CheckBox checkDESC;
+        private DevExpress.XtraEditors.ComboBoxEdit comboOrder;
     }
 }

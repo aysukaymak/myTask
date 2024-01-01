@@ -42,6 +42,7 @@ namespace mytask_
                         fluentDesignFormContainer1.Invoke(new MethodInvoker(delegate ()
                         {
                             fluentDesignFormContainer1.Controls.Add(control);
+                            control.Refresh();
                             control.BringToFront();
                         }));
                     }

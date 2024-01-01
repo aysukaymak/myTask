@@ -48,7 +48,7 @@ namespace mytask_.UI.Modules
 
         private void refresh_items()
         {
-            richTextBoxHeader.Text = "Untitled Note";
+            richTextBoxHeader.Text = "Untitled Task";
             richTextBoxTask.Text = string.Empty;
             dateEditStart.Text = DateTime.Now.ToString("MM.dd.yyyy");
             dateEditEnd.Text = DateTime.Now.ToString("MM.dd.yyyy");

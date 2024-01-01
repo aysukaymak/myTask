@@ -111,7 +111,7 @@
             this.dateEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateEdit1.EditValue = null;
             this.dateEdit1.Enabled = false;
-            this.dateEdit1.Location = new System.Drawing.Point(943, 312);
+            this.dateEdit1.Location = new System.Drawing.Point(935, 402);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -135,10 +135,10 @@
             this.buttonDiscard.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonDiscard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.buttonDiscard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonDiscard.ImageOptions.SvgImage")));
-            this.buttonDiscard.Location = new System.Drawing.Point(978, 19);
+            this.buttonDiscard.Location = new System.Drawing.Point(953, 21);
             this.buttonDiscard.Name = "buttonDiscard";
             this.buttonDiscard.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonDiscard.Size = new System.Drawing.Size(55, 51);
+            this.buttonDiscard.Size = new System.Drawing.Size(60, 60);
             this.buttonDiscard.TabIndex = 33;
             this.buttonDiscard.Visible = false;
             this.buttonDiscard.Click += new System.EventHandler(this.buttonDiscard_Click);
@@ -151,10 +151,10 @@
             this.buttonSave.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.buttonSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonSave.ImageOptions.SvgImage")));
-            this.buttonSave.Location = new System.Drawing.Point(1039, 20);
+            this.buttonSave.Location = new System.Drawing.Point(1019, 20);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonSave.Size = new System.Drawing.Size(50, 50);
+            this.buttonSave.Size = new System.Drawing.Size(60, 60);
             this.buttonSave.TabIndex = 32;
             this.buttonSave.Visible = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -164,10 +164,10 @@
             this.buttonProfileUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonProfileUpdate.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonProfileUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonProfileUpdate.ImageOptions.SvgImage")));
-            this.buttonProfileUpdate.Location = new System.Drawing.Point(1095, 20);
+            this.buttonProfileUpdate.Location = new System.Drawing.Point(1085, 20);
             this.buttonProfileUpdate.Name = "buttonProfileUpdate";
             this.buttonProfileUpdate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonProfileUpdate.Size = new System.Drawing.Size(50, 50);
+            this.buttonProfileUpdate.Size = new System.Drawing.Size(60, 60);
             this.buttonProfileUpdate.TabIndex = 31;
             this.buttonProfileUpdate.CheckedChanged += new System.EventHandler(this.buttonProfileUpdate_CheckedChanged);
             // 
@@ -175,7 +175,7 @@
             // 
             this.textPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textPassword.Enabled = false;
-            this.textPassword.Location = new System.Drawing.Point(943, 365);
+            this.textPassword.Location = new System.Drawing.Point(932, 478);
             this.textPassword.Name = "textPassword";
             this.textPassword.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -199,7 +199,7 @@
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.NullText = "Right-click to upload a picture.";
-            this.pictureEdit1.Properties.OptionsMask.MaskLayoutMode = DevExpress.XtraEditors.Controls.PictureEditMaskLayoutMode.BottomCenter;
+            this.pictureEdit1.Properties.OptionsMask.MaskLayoutMode = DevExpress.XtraEditors.Controls.PictureEditMaskLayoutMode.MiddleCenter;
             this.pictureEdit1.Properties.OptionsMask.MaskType = DevExpress.XtraEditors.Controls.PictureEditMaskType.Circle;
             this.pictureEdit1.Properties.OptionsMask.Size = new System.Drawing.Size(300, 300);
             this.pictureEdit1.Properties.ShowEditMenuItem = DevExpress.Utils.DefaultBoolean.False;
@@ -214,9 +214,9 @@
             this.separatorControl6.AutoSizeMode = true;
             this.separatorControl6.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl6.Location = new System.Drawing.Point(363, 342);
+            this.separatorControl6.Location = new System.Drawing.Point(341, 445);
             this.separatorControl6.Name = "separatorControl6";
-            this.separatorControl6.Size = new System.Drawing.Size(782, 19);
+            this.separatorControl6.Size = new System.Drawing.Size(824, 19);
             this.separatorControl6.TabIndex = 27;
             // 
             // separatorControl5
@@ -226,9 +226,9 @@
             this.separatorControl5.AutoSizeMode = true;
             this.separatorControl5.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl5.Location = new System.Drawing.Point(366, 288);
+            this.separatorControl5.Location = new System.Drawing.Point(341, 371);
             this.separatorControl5.Name = "separatorControl5";
-            this.separatorControl5.Size = new System.Drawing.Size(782, 19);
+            this.separatorControl5.Size = new System.Drawing.Size(824, 19);
             this.separatorControl5.TabIndex = 26;
             // 
             // separatorControl4
@@ -238,9 +238,9 @@
             this.separatorControl4.AutoSizeMode = true;
             this.separatorControl4.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl4.Location = new System.Drawing.Point(363, 235);
+            this.separatorControl4.Location = new System.Drawing.Point(341, 300);
             this.separatorControl4.Name = "separatorControl4";
-            this.separatorControl4.Size = new System.Drawing.Size(782, 19);
+            this.separatorControl4.Size = new System.Drawing.Size(824, 19);
             this.separatorControl4.TabIndex = 25;
             // 
             // separatorControl3
@@ -250,9 +250,9 @@
             this.separatorControl3.AutoSizeMode = true;
             this.separatorControl3.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl3.Location = new System.Drawing.Point(363, 182);
+            this.separatorControl3.Location = new System.Drawing.Point(341, 229);
             this.separatorControl3.Name = "separatorControl3";
-            this.separatorControl3.Size = new System.Drawing.Size(782, 19);
+            this.separatorControl3.Size = new System.Drawing.Size(824, 19);
             this.separatorControl3.TabIndex = 24;
             // 
             // separatorControl8
@@ -262,9 +262,9 @@
             this.separatorControl8.AutoSizeMode = true;
             this.separatorControl8.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl8.Location = new System.Drawing.Point(363, 129);
+            this.separatorControl8.Location = new System.Drawing.Point(341, 158);
             this.separatorControl8.Name = "separatorControl8";
-            this.separatorControl8.Size = new System.Drawing.Size(782, 19);
+            this.separatorControl8.Size = new System.Drawing.Size(824, 19);
             this.separatorControl8.TabIndex = 23;
             // 
             // separatorControl2
@@ -286,22 +286,21 @@
             this.separatorControl1.AutoSizeMode = true;
             this.separatorControl1.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl1.Location = new System.Drawing.Point(363, 76);
+            this.separatorControl1.Location = new System.Drawing.Point(341, 87);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(782, 19);
+            this.separatorControl1.Size = new System.Drawing.Size(821, 19);
             this.separatorControl1.TabIndex = 15;
             // 
             // labelHeader
             // 
-            this.labelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelHeader.BackColor = System.Drawing.Color.Transparent;
             this.labelHeader.Font = new System.Drawing.Font("Tahoma", 24F);
             this.labelHeader.Location = new System.Drawing.Point(355, 20);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(617, 50);
+            this.labelHeader.Size = new System.Drawing.Size(601, 60);
             this.labelHeader.TabIndex = 14;
             this.labelHeader.Text = "name_surname\'s MyTask\r\n";
+            this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textEmail
             // 
@@ -310,7 +309,7 @@
             this.textEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textEmail.Enabled = false;
             this.textEmail.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textEmail.Location = new System.Drawing.Point(803, 208);
+            this.textEmail.Location = new System.Drawing.Point(795, 261);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(342, 25);
             this.textEmail.TabIndex = 13;
@@ -318,12 +317,10 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label1.Location = new System.Drawing.Point(362, 208);
+            this.label1.Location = new System.Drawing.Point(370, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 24);
             this.label1.TabIndex = 12;
@@ -336,7 +333,7 @@
             this.textTelephone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textTelephone.Enabled = false;
             this.textTelephone.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textTelephone.Location = new System.Drawing.Point(998, 261);
+            this.textTelephone.Location = new System.Drawing.Point(990, 331);
             this.textTelephone.Mask = "(999) 000-0000";
             this.textTelephone.Name = "textTelephone";
             this.textTelephone.Size = new System.Drawing.Size(147, 25);
@@ -350,7 +347,7 @@
             this.textSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSurname.Enabled = false;
             this.textSurname.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textSurname.Location = new System.Drawing.Point(943, 155);
+            this.textSurname.Location = new System.Drawing.Point(935, 190);
             this.textSurname.Name = "textSurname";
             this.textSurname.Size = new System.Drawing.Size(202, 25);
             this.textSurname.TabIndex = 6;
@@ -363,7 +360,7 @@
             this.textName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textName.Enabled = false;
             this.textName.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textName.Location = new System.Drawing.Point(943, 102);
+            this.textName.Location = new System.Drawing.Point(935, 119);
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(202, 25);
             this.textName.TabIndex = 0;
@@ -371,12 +368,10 @@
             // 
             // labelBirthday
             // 
-            this.labelBirthday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelBirthday.AutoSize = true;
             this.labelBirthday.BackColor = System.Drawing.Color.Transparent;
             this.labelBirthday.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelBirthday.Location = new System.Drawing.Point(362, 314);
+            this.labelBirthday.Location = new System.Drawing.Point(370, 406);
             this.labelBirthday.Name = "labelBirthday";
             this.labelBirthday.Size = new System.Drawing.Size(84, 24);
             this.labelBirthday.TabIndex = 5;
@@ -384,12 +379,10 @@
             // 
             // labelPassword
             // 
-            this.labelPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelPassword.AutoSize = true;
             this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelPassword.Location = new System.Drawing.Point(362, 367);
+            this.labelPassword.Location = new System.Drawing.Point(370, 480);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(94, 24);
             this.labelPassword.TabIndex = 4;
@@ -397,12 +390,10 @@
             // 
             // labelTelephone
             // 
-            this.labelTelephone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelTelephone.AutoSize = true;
             this.labelTelephone.BackColor = System.Drawing.Color.Transparent;
             this.labelTelephone.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelTelephone.Location = new System.Drawing.Point(362, 261);
+            this.labelTelephone.Location = new System.Drawing.Point(370, 331);
             this.labelTelephone.Name = "labelTelephone";
             this.labelTelephone.Size = new System.Drawing.Size(104, 24);
             this.labelTelephone.TabIndex = 3;
@@ -410,12 +401,10 @@
             // 
             // labelSurname
             // 
-            this.labelSurname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelSurname.AutoSize = true;
             this.labelSurname.BackColor = System.Drawing.Color.Transparent;
             this.labelSurname.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelSurname.Location = new System.Drawing.Point(359, 155);
+            this.labelSurname.Location = new System.Drawing.Point(362, 190);
             this.labelSurname.Name = "labelSurname";
             this.labelSurname.Size = new System.Drawing.Size(89, 24);
             this.labelSurname.TabIndex = 2;
@@ -423,12 +412,10 @@
             // 
             // labelName
             // 
-            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelName.AutoSize = true;
             this.labelName.BackColor = System.Drawing.Color.Transparent;
             this.labelName.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelName.Location = new System.Drawing.Point(359, 102);
+            this.labelName.Location = new System.Drawing.Point(362, 119);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(62, 24);
             this.labelName.TabIndex = 1;

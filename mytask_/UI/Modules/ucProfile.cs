@@ -29,7 +29,7 @@ namespace mytask_.UI.Modules
         {
             try
             {
-                SqlCommand command = new SqlCommand($"select first_name, last_name, phone, email, password, image, birthday from users where id = {1}", connection_.Connection_()); //change user_id value after completed users and login tables
+                SqlCommand command = new SqlCommand($"select first_name, last_name, phone, email, password, image, birthday from users where id = {userId}", connection_.Connection_()); //change user_id value after completed users and login tables
                 SqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read())
@@ -95,7 +95,7 @@ namespace mytask_.UI.Modules
             update.Parameters.AddWithValue("@email", textEmail.Text);
             update.Parameters.AddWithValue("@password", textPassword.Text);
             update.Parameters.AddWithValue("@birthday", DateTime.Parse(dateEdit1.Text));
-            update.Parameters.AddWithValue("@id", 1);
+            update.Parameters.AddWithValue("@id", userId);
             update.ExecuteNonQuery();
             connection_.Connection_().Close();
             default_user_info();

@@ -108,7 +108,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.separatorControl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.separatorControl3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl3.Location = new System.Drawing.Point(20, 160);
+            this.separatorControl3.Location = new System.Drawing.Point(18, 174);
             this.separatorControl3.Name = "separatorControl3";
             this.separatorControl3.Size = new System.Drawing.Size(1119, 23);
             this.separatorControl3.TabIndex = 6;
@@ -121,9 +121,9 @@
             this.richTextBoxNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.richTextBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxNote.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxNote.Location = new System.Drawing.Point(20, 189);
+            this.richTextBoxNote.Location = new System.Drawing.Point(20, 203);
             this.richTextBoxNote.Name = "richTextBoxNote";
-            this.richTextBoxNote.Size = new System.Drawing.Size(1119, 535);
+            this.richTextBoxNote.Size = new System.Drawing.Size(1119, 521);
             this.richTextBoxNote.TabIndex = 5;
             this.richTextBoxNote.Text = "";
             // 
@@ -135,9 +135,9 @@
             this.richTextBoxHeader.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxHeader.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.richTextBoxHeader.Location = new System.Drawing.Point(20, 103);
+            this.richTextBoxHeader.Location = new System.Drawing.Point(22, 115);
             this.richTextBoxHeader.Name = "richTextBoxHeader";
-            this.richTextBoxHeader.Size = new System.Drawing.Size(1119, 80);
+            this.richTextBoxHeader.Size = new System.Drawing.Size(1119, 53);
             this.richTextBoxHeader.TabIndex = 4;
             this.richTextBoxHeader.Text = "Untitled Note";
             // 
@@ -147,7 +147,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.separatorControl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.separatorControl4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl4.Location = new System.Drawing.Point(20, 74);
+            this.separatorControl4.Location = new System.Drawing.Point(20, 86);
             this.separatorControl4.Name = "separatorControl4";
             this.separatorControl4.Size = new System.Drawing.Size(1119, 23);
             this.separatorControl4.TabIndex = 3;
@@ -161,10 +161,10 @@
             this.buttonRefresh.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.buttonRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonRefresh.ImageOptions.SvgImage")));
-            this.buttonRefresh.Location = new System.Drawing.Point(1019, 20);
+            this.buttonRefresh.Location = new System.Drawing.Point(1015, 20);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonRefresh.Size = new System.Drawing.Size(48, 48);
+            this.buttonRefresh.Size = new System.Drawing.Size(60, 60);
             this.buttonRefresh.TabIndex = 1;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
@@ -176,10 +176,10 @@
             this.buttonSave.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.buttonSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonSave.ImageOptions.SvgImage")));
-            this.buttonSave.Location = new System.Drawing.Point(1091, 20);
+            this.buttonSave.Location = new System.Drawing.Point(1081, 20);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonSave.Size = new System.Drawing.Size(48, 48);
+            this.buttonSave.Size = new System.Drawing.Size(60, 60);
             this.buttonSave.TabIndex = 0;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 

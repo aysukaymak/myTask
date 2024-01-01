@@ -30,30 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNotes));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelid = new DevExpress.XtraEditors.LabelControl();
-            this.richTextBoxHeader = new System.Windows.Forms.RichTextBox();
+            this.buttonRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonSave = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonDiscard = new DevExpress.XtraEditors.SimpleButton();
             this.buttonDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.buttonUpdate = new DevExpress.XtraEditors.CheckButton();
-            this.gridControlNotes = new DevExpress.XtraGrid.GridControl();
-            this.tileViewNotes = new DevExpress.XtraGrid.Views.Tile.TileView();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.labelNoteDate = new DevExpress.XtraEditors.LabelControl();
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.richTextBoxNote = new System.Windows.Forms.RichTextBox();
-            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
-            this.buttonDiscard = new DevExpress.XtraEditors.SimpleButton();
-            this.buttonSave = new DevExpress.XtraEditors.SimpleButton();
+            this.labelid = new DevExpress.XtraEditors.LabelControl();
+            this.richTextBoxHeader = new System.Windows.Forms.RichTextBox();
+            this.buttonUpdate = new DevExpress.XtraEditors.CheckButton();
+            this.gridControlNotes = new DevExpress.XtraGrid.GridControl();
+            this.tileViewNotes = new DevExpress.XtraGrid.Views.Tile.TileView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNotes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileViewNotes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Controls.Add(this.buttonRefresh);
             this.panelControl1.Controls.Add(this.buttonSave);
             this.panelControl1.Controls.Add(this.buttonDiscard);
             this.panelControl1.Controls.Add(this.buttonDelete);
@@ -71,6 +73,126 @@
             this.panelControl1.Size = new System.Drawing.Size(1165, 747);
             this.panelControl1.TabIndex = 0;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefresh.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buttonRefresh.Appearance.Options.UseForeColor = true;
+            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonRefresh.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
+            this.buttonRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonRefresh.ImageOptions.SvgImage")));
+            this.buttonRefresh.Location = new System.Drawing.Point(1088, 20);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonRefresh.Size = new System.Drawing.Size(60, 60);
+            this.buttonRefresh.TabIndex = 36;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSave.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buttonSave.Appearance.Options.UseForeColor = true;
+            this.buttonSave.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
+            this.buttonSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonSave.ImageOptions.SvgImage")));
+            this.buttonSave.Location = new System.Drawing.Point(956, 20);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonSave.Size = new System.Drawing.Size(60, 60);
+            this.buttonSave.TabIndex = 12;
+            this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonDiscard
+            // 
+            this.buttonDiscard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDiscard.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buttonDiscard.Appearance.Options.UseForeColor = true;
+            this.buttonDiscard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonDiscard.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonDiscard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
+            this.buttonDiscard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonDiscard.ImageOptions.SvgImage")));
+            this.buttonDiscard.Location = new System.Drawing.Point(890, 18);
+            this.buttonDiscard.Name = "buttonDiscard";
+            this.buttonDiscard.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonDiscard.Size = new System.Drawing.Size(60, 60);
+            this.buttonDiscard.TabIndex = 13;
+            this.buttonDiscard.Visible = false;
+            this.buttonDiscard.Click += new System.EventHandler(this.buttonDiscard_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDelete.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buttonDelete.Appearance.Options.UseForeColor = true;
+            this.buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonDelete.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
+            this.buttonDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonDelete.ImageOptions.SvgImage")));
+            this.buttonDelete.Location = new System.Drawing.Point(824, 18);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonDelete.Size = new System.Drawing.Size(60, 60);
+            this.buttonDelete.TabIndex = 33;
+            this.buttonDelete.Visible = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // separatorControl1
+            // 
+            this.separatorControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.separatorControl1.AutoSizeMode = true;
+            this.separatorControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.separatorControl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.separatorControl1.Location = new System.Drawing.Point(496, 84);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(651, 19);
+            this.separatorControl1.TabIndex = 15;
+            // 
+            // labelNoteDate
+            // 
+            this.labelNoteDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelNoteDate.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelNoteDate.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelNoteDate.Appearance.Options.UseFont = true;
+            this.labelNoteDate.Appearance.Options.UseForeColor = true;
+            this.labelNoteDate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelNoteDate.Location = new System.Drawing.Point(497, 109);
+            this.labelNoteDate.Name = "labelNoteDate";
+            this.labelNoteDate.Size = new System.Drawing.Size(43, 24);
+            this.labelNoteDate.TabIndex = 19;
+            this.labelNoteDate.Text = "Date";
+            // 
+            // separatorControl2
+            // 
+            this.separatorControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.separatorControl2.AutoSizeMode = true;
+            this.separatorControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.separatorControl2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.separatorControl2.Location = new System.Drawing.Point(497, 139);
+            this.separatorControl2.Name = "separatorControl2";
+            this.separatorControl2.Size = new System.Drawing.Size(651, 19);
+            this.separatorControl2.TabIndex = 18;
+            // 
+            // richTextBoxNote
+            // 
+            this.richTextBoxNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.richTextBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxNote.Enabled = false;
+            this.richTextBoxNote.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBoxNote.Location = new System.Drawing.Point(497, 164);
+            this.richTextBoxNote.Name = "richTextBoxNote";
+            this.richTextBoxNote.Size = new System.Drawing.Size(651, 562);
+            this.richTextBoxNote.TabIndex = 17;
+            this.richTextBoxNote.Text = "";
+            // 
             // labelid
             // 
             this.labelid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -78,7 +200,7 @@
             this.labelid.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.labelid.Appearance.Options.UseFont = true;
             this.labelid.Appearance.Options.UseForeColor = true;
-            this.labelid.Location = new System.Drawing.Point(1089, 102);
+            this.labelid.Location = new System.Drawing.Point(1089, 109);
             this.labelid.Name = "labelid";
             this.labelid.Size = new System.Drawing.Size(59, 24);
             this.labelid.TabIndex = 35;
@@ -97,36 +219,19 @@
             this.richTextBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.richTextBoxHeader.Location = new System.Drawing.Point(497, 20);
             this.richTextBoxHeader.Name = "richTextBoxHeader";
-            this.richTextBoxHeader.Size = new System.Drawing.Size(435, 48);
+            this.richTextBoxHeader.Size = new System.Drawing.Size(321, 48);
             this.richTextBoxHeader.TabIndex = 34;
             this.richTextBoxHeader.Text = "Header";
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelete.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.buttonDelete.Appearance.Options.UseForeColor = true;
-            this.buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonDelete.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.buttonDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
-            this.buttonDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonDelete.ImageOptions.SvgImage")));
-            this.buttonDelete.Location = new System.Drawing.Point(938, 20);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonDelete.Size = new System.Drawing.Size(48, 48);
-            this.buttonDelete.TabIndex = 33;
-            this.buttonDelete.Visible = false;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonUpdate
             // 
             this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdate.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonUpdate.ImageOptions.SvgImage")));
-            this.buttonUpdate.Location = new System.Drawing.Point(1100, 20);
+            this.buttonUpdate.Location = new System.Drawing.Point(1022, 18);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonUpdate.Size = new System.Drawing.Size(48, 48);
+            this.buttonUpdate.Size = new System.Drawing.Size(60, 60);
             this.buttonUpdate.TabIndex = 32;
             this.buttonUpdate.CheckedChanged += new System.EventHandler(this.buttonUpdate_CheckedChanged_1);
             // 
@@ -156,93 +261,6 @@
             this.tileViewNotes.OptionsTiles.RowCount = 0;
             this.tileViewNotes.ItemClick += new DevExpress.XtraGrid.Views.Tile.TileViewItemClickEventHandler(this.tileViewNotes_ItemClick);
             // 
-            // labelNoteDate
-            // 
-            this.labelNoteDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNoteDate.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelNoteDate.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.labelNoteDate.Appearance.Options.UseFont = true;
-            this.labelNoteDate.Appearance.Options.UseForeColor = true;
-            this.labelNoteDate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelNoteDate.Location = new System.Drawing.Point(497, 102);
-            this.labelNoteDate.Name = "labelNoteDate";
-            this.labelNoteDate.Size = new System.Drawing.Size(43, 24);
-            this.labelNoteDate.TabIndex = 19;
-            this.labelNoteDate.Text = "Date";
-            // 
-            // separatorControl2
-            // 
-            this.separatorControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.separatorControl2.AutoSizeMode = true;
-            this.separatorControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.separatorControl2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl2.Location = new System.Drawing.Point(497, 132);
-            this.separatorControl2.Name = "separatorControl2";
-            this.separatorControl2.Size = new System.Drawing.Size(651, 19);
-            this.separatorControl2.TabIndex = 18;
-            // 
-            // richTextBoxNote
-            // 
-            this.richTextBoxNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.richTextBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxNote.Enabled = false;
-            this.richTextBoxNote.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxNote.Location = new System.Drawing.Point(497, 161);
-            this.richTextBoxNote.Name = "richTextBoxNote";
-            this.richTextBoxNote.Size = new System.Drawing.Size(651, 565);
-            this.richTextBoxNote.TabIndex = 17;
-            this.richTextBoxNote.Text = "";
-            // 
-            // separatorControl1
-            // 
-            this.separatorControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.separatorControl1.AutoSizeMode = true;
-            this.separatorControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.separatorControl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.separatorControl1.Location = new System.Drawing.Point(497, 73);
-            this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(651, 19);
-            this.separatorControl1.TabIndex = 15;
-            // 
-            // buttonDiscard
-            // 
-            this.buttonDiscard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDiscard.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.buttonDiscard.Appearance.Options.UseForeColor = true;
-            this.buttonDiscard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonDiscard.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.buttonDiscard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
-            this.buttonDiscard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonDiscard.ImageOptions.SvgImage")));
-            this.buttonDiscard.Location = new System.Drawing.Point(992, 20);
-            this.buttonDiscard.Name = "buttonDiscard";
-            this.buttonDiscard.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonDiscard.Size = new System.Drawing.Size(48, 48);
-            this.buttonDiscard.TabIndex = 13;
-            this.buttonDiscard.Visible = false;
-            this.buttonDiscard.Click += new System.EventHandler(this.buttonDiscard_Click);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSave.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.buttonSave.Appearance.Options.UseForeColor = true;
-            this.buttonSave.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.buttonSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
-            this.buttonSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonSave.ImageOptions.SvgImage")));
-            this.buttonSave.Location = new System.Drawing.Point(1046, 20);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonSave.Size = new System.Drawing.Size(48, 48);
-            this.buttonSave.TabIndex = 12;
-            this.buttonSave.Visible = false;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
             // ucNotes
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -252,15 +270,13 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "ucNotes";
             this.Size = new System.Drawing.Size(1165, 747);
-//            this.AutoValidateChanged += new System.EventHandler(this.ucNotes_AutoValidateChanged);
-//            this.Load += new System.EventHandler(this.ucNotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNotes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileViewNotes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +296,6 @@
         private DevExpress.XtraEditors.SimpleButton buttonDelete;
         private System.Windows.Forms.RichTextBox richTextBoxHeader;
         private DevExpress.XtraEditors.LabelControl labelid;
+        private DevExpress.XtraEditors.SimpleButton buttonRefresh;
     }
 }

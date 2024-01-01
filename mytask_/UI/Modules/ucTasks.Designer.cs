@@ -44,6 +44,7 @@
             this.buttonUpdate = new DevExpress.XtraEditors.CheckButton();
             this.gridControlTasks = new DevExpress.XtraGrid.GridControl();
             this.tileViewTasks = new DevExpress.XtraGrid.Views.Tile.TileView();
+            this.buttonRefresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditEnd.Properties)).BeginInit();
@@ -75,6 +76,7 @@
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Controls.Add(this.buttonRefresh);
             this.panelControl1.Controls.Add(this.dateEditEnd);
             this.panelControl1.Controls.Add(this.dateEditStart);
             this.panelControl1.Controls.Add(this.buttonSave);
@@ -136,10 +138,10 @@
             this.buttonSave.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.buttonSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonSave.ImageOptions.SvgImage")));
-            this.buttonSave.Location = new System.Drawing.Point(1195, 21);
+            this.buttonSave.Location = new System.Drawing.Point(1133, 20);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonSave.Size = new System.Drawing.Size(55, 51);
+            this.buttonSave.Size = new System.Drawing.Size(50, 50);
             this.buttonSave.TabIndex = 12;
             this.buttonSave.Visible = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -153,10 +155,10 @@
             this.buttonDiscard.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonDiscard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.buttonDiscard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonDiscard.ImageOptions.SvgImage")));
-            this.buttonDiscard.Location = new System.Drawing.Point(1134, 21);
+            this.buttonDiscard.Location = new System.Drawing.Point(1077, 21);
             this.buttonDiscard.Name = "buttonDiscard";
             this.buttonDiscard.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonDiscard.Size = new System.Drawing.Size(55, 51);
+            this.buttonDiscard.Size = new System.Drawing.Size(50, 50);
             this.buttonDiscard.TabIndex = 13;
             this.buttonDiscard.Visible = false;
             this.buttonDiscard.Click += new System.EventHandler(this.buttonDiscard_Click);
@@ -170,10 +172,10 @@
             this.buttonDelete.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
             this.buttonDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonDelete.ImageOptions.SvgImage")));
-            this.buttonDelete.Location = new System.Drawing.Point(1072, 21);
+            this.buttonDelete.Location = new System.Drawing.Point(1021, 21);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonDelete.Size = new System.Drawing.Size(55, 51);
+            this.buttonDelete.Size = new System.Drawing.Size(50, 50);
             this.buttonDelete.TabIndex = 33;
             this.buttonDelete.Visible = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
@@ -245,7 +247,7 @@
             this.richTextBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.richTextBoxHeader.Location = new System.Drawing.Point(568, 21);
             this.richTextBoxHeader.Name = "richTextBoxHeader";
-            this.richTextBoxHeader.Size = new System.Drawing.Size(497, 51);
+            this.richTextBoxHeader.Size = new System.Drawing.Size(427, 51);
             this.richTextBoxHeader.TabIndex = 34;
             this.richTextBoxHeader.Text = "Header";
             // 
@@ -254,10 +256,10 @@
             this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdate.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonUpdate.ImageOptions.SvgImage")));
-            this.buttonUpdate.Location = new System.Drawing.Point(1257, 21);
+            this.buttonUpdate.Location = new System.Drawing.Point(1189, 21);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.buttonUpdate.Size = new System.Drawing.Size(55, 51);
+            this.buttonUpdate.Size = new System.Drawing.Size(50, 50);
             this.buttonUpdate.TabIndex = 32;
             this.buttonUpdate.CheckedChanged += new System.EventHandler(this.buttonUpdate_CheckedChanged);
             // 
@@ -287,6 +289,22 @@
             this.tileViewTasks.OptionsTiles.Padding = new System.Windows.Forms.Padding(0);
             this.tileViewTasks.OptionsTiles.RowCount = 0;
             this.tileViewTasks.ItemClick += new DevExpress.XtraGrid.Views.Tile.TileViewItemClickEventHandler(this.tileViewTasks_ItemClick);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefresh.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buttonRefresh.Appearance.Options.UseForeColor = true;
+            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonRefresh.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.BottomCenter;
+            this.buttonRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("buttonRefresh.ImageOptions.SvgImage")));
+            this.buttonRefresh.Location = new System.Drawing.Point(1245, 21);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.buttonRefresh.Size = new System.Drawing.Size(50, 50);
+            this.buttonRefresh.TabIndex = 38;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // ucTasks
             // 
@@ -329,5 +347,6 @@
         private DevExpress.XtraGrid.Views.Tile.TileView tileViewTasks;
         private DevExpress.XtraEditors.DateEdit dateEditEnd;
         private DevExpress.XtraEditors.DateEdit dateEditStart;
+        private DevExpress.XtraEditors.SimpleButton buttonRefresh;
     }
 }

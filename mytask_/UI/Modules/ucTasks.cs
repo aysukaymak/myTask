@@ -197,5 +197,9 @@ namespace mytask_.UI.Modules
             labelid.Text = tileViewTasks.GetRowCellDisplayText(0, "id");
         }
 
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            list_task();
+        }
     }
 }

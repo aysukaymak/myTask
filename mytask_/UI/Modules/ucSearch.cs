@@ -15,8 +15,6 @@ namespace mytask_.UI.Modules
 {
     public partial class ucSearch : DevExpress.DXperience.Demos.TutorialControlBase
     {
-
-        string orderByColumn;
         public int userId;
         public ucSearch(int userId)
         {
@@ -37,7 +35,7 @@ namespace mytask_.UI.Modules
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             // Build the SQL query based on the search criteria
-            StringBuilder queryBuilder = new StringBuilder("SELECT id, header, note, date FROM notes WHERE user_id = 1");
+            StringBuilder queryBuilder = new StringBuilder($"SELECT id, header, note, date FROM notes WHERE user_id = {userId}");
 
             // Add filters based on user input
             if (!string.IsNullOrWhiteSpace(textHeader.Text))
@@ -47,17 +45,11 @@ namespace mytask_.UI.Modules
                 queryBuilder.Append($" AND note LIKE '%{textKeywords.Text}%'");
 
             if (!string.IsNullOrWhiteSpace(textDate1.Text))
-            {
-                queryBuilder.Append($" AND date >= '{textDate1.Text}'");
-            }
+                queryBuilder.Append($" AND date >= '{DateTime.Parse(textDate1.Text)}'");
             
 
             if (!string.IsNullOrWhiteSpace(textDate2.Text))
-            {
-                queryBuilder.Append($" AND date <= '{textDate2.Text}'");
-            }
-
-
+                queryBuilder.Append($" AND date <= '{DateTime.Parse(textDate2.Text)}'");
 
             // Add order by clause based on user selection
             string sortOrder = (checkASC.Checked) ? "ASC" : "DESC";

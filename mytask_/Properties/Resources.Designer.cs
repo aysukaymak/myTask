@@ -79,5 +79,15 @@ namespace mytask_.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   DevExpress.Utils.Svg.SvgImage türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage Search {
+            get {
+                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
     }
 }

@@ -145,7 +145,7 @@ namespace mytask_.UI.Modules
             //this function getting datas from note table and fills gridControlNotes(tileView) with these datas
             //i.e. just setting the datasource for tileview(notes list)
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter($"select id, header, note, date from notes where user_id = {1} order by date desc", connection_.Connection_()); //change user_id value after completed users and login tables
+            SqlDataAdapter da = new SqlDataAdapter($"select id, header, note, date from notes where user_id = {userId} order by date desc", connection_.Connection_()); //change user_id value after completed users and login tables
             da.Fill(dt);
             gridControlNotes.DataSource = dt;
         }
@@ -179,6 +179,11 @@ namespace mytask_.UI.Modules
             labelNoteDate.Text = tileViewNotes.GetRowCellDisplayText(0, "date");
             richTextBoxNote.Text = tileViewNotes.GetRowCellDisplayText(0, "note");
             labelid.Text = tileViewNotes.GetRowCellDisplayText(0, "id");
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            list_notes();
         }
     }
 }
