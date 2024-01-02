@@ -129,19 +129,21 @@
             // textKeywords
             // 
             this.textKeywords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.textKeywords.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textKeywords.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textKeywords.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textKeywords.Location = new System.Drawing.Point(138, 130);
+            this.textKeywords.Location = new System.Drawing.Point(164, 130);
             this.textKeywords.Name = "textKeywords";
-            this.textKeywords.Size = new System.Drawing.Size(162, 25);
+            this.textKeywords.Size = new System.Drawing.Size(162, 32);
             this.textKeywords.TabIndex = 12;
             // 
             // textHeader
             // 
+            this.textHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.textHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.textHeader.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textHeader.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textHeader.Location = new System.Drawing.Point(482, 21);
+            this.textHeader.Location = new System.Drawing.Point(517, 22);
             this.textHeader.Name = "textHeader";
             this.textHeader.Size = new System.Drawing.Size(162, 25);
             this.textHeader.TabIndex = 13;
@@ -153,7 +155,7 @@
             this.textDate1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textDate1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textDate1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textDate1.Location = new System.Drawing.Point(542, 129);
+            this.textDate1.Location = new System.Drawing.Point(568, 129);
             this.textDate1.Mask = "00.00.0000";
             this.textDate1.Name = "textDate1";
             this.textDate1.Size = new System.Drawing.Size(122, 25);
@@ -167,7 +169,7 @@
             this.textDate2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textDate2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textDate2.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textDate2.Location = new System.Drawing.Point(693, 129);
+            this.textDate2.Location = new System.Drawing.Point(719, 129);
             this.textDate2.Mask = "00.00.0000";
             this.textDate2.Name = "textDate2";
             this.textDate2.Size = new System.Drawing.Size(122, 25);
@@ -181,7 +183,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label6.Location = new System.Drawing.Point(670, 131);
+            this.label6.Location = new System.Drawing.Point(696, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(17, 24);
             this.label6.TabIndex = 17;
@@ -194,6 +196,7 @@
             this.buttonSearch.Appearance.BorderColor = System.Drawing.Color.Transparent;
             this.buttonSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.buttonSearch.Appearance.Options.UseBackColor = true;
+            this.buttonSearch.Appearance.Options.UseBorderColor = true;
             this.buttonSearch.Appearance.Options.UseFont = true;
             this.buttonSearch.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.buttonSearch.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
@@ -255,20 +258,20 @@
             // 
             this.comboOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboOrder.Location = new System.Drawing.Point(138, 18);
+            this.comboOrder.Location = new System.Drawing.Point(138, 19);
             this.comboOrder.Name = "comboOrder";
             this.comboOrder.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.comboOrder.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.comboOrder.Properties.Appearance.Options.UseBackColor = true;
             this.comboOrder.Properties.Appearance.Options.UseFont = true;
-            this.comboOrder.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.comboOrder.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.comboOrder.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboOrder.Properties.Items.AddRange(new object[] {
             "date",
             "header\t",
             "note"});
-            this.comboOrder.Size = new System.Drawing.Size(125, 28);
+            this.comboOrder.Size = new System.Drawing.Size(153, 30);
             this.comboOrder.TabIndex = 22;
             // 
             // ucSearch
