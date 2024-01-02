@@ -27,3 +27,11 @@ CREATE TABLE notes (
     date DATE DEFAULT GETDATE(),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+CREATE TABLE history (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    user_id INT NOT NULL,
+    header NVARCHAR(100),
+    date DATE DEFAULT GETDATE(),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
