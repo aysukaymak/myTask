@@ -22,11 +22,9 @@ namespace mytask_
             InitializeComponent();
             this.userId = userId;
         }
+
         //get for userId
         public int getUserId () { return userId; }
-
-        
-
 
         async Task LoadModuleAsync(ModuleInfo module)
         {
@@ -70,6 +68,7 @@ namespace mytask_
             this.fluentDesignFormContainer1.Controls.Add(new ucSearch(userId) { Dock = DockStyle.Fill });
             this.fluentDesignFormContainer1.Controls.Add(new ucTasks(userId) { Dock = DockStyle.Fill });
             this.fluentDesignFormContainer1.Controls.Add(new ucCalendar(userId) { Dock = DockStyle.Fill });
+            this.fluentDesignFormContainer1.Controls.Add(new ucHistory(userId) { Dock = DockStyle.Fill });
             this.itemNav.Caption = $"{accordionControlElementLists.Text}";
         }
 
@@ -142,6 +141,16 @@ namespace mytask_
                 ModulesInfo.Add(new ModuleInfo("ucNotes", "mytask_.UI.Modules.ucNotes", userId.ToString()));
             }
             await LoadModuleAsync(ModulesInfo.GetItem("ucNotes"));
+        }
+
+        private async void accordionControlElementHistory_Click(object sender, EventArgs e)
+        {
+            this.itemNav.Caption = $"{accordionControlElementLists.Text}";
+            if (ModulesInfo.GetItem("ucHistory") == null)
+            {
+                ModulesInfo.Add(new ModuleInfo("ucHistory", "mytask_.UI.Modules.ucHistory", userId.ToString()));
+            }
+            await LoadModuleAsync(ModulesInfo.GetItem("ucHistory"));
         }
     }
 }

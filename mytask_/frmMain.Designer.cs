@@ -41,6 +41,8 @@
             this.accordionControlElementTasks = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementCalendar = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementProfile = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlElementHistory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.itemNav = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -73,7 +75,9 @@
             this.accordionControlElementNew,
             this.accordionControlElementLists,
             this.accordionControlElementCalendar,
-            this.accordionControlElementProfile});
+            this.accordionControlElementProfile,
+            this.accordionControlSeparator1,
+            this.accordionControlElementHistory});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.LookAndFeel.SkinName = "Office 2019 Dark Gray";
             this.accordionControl1.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -187,6 +191,21 @@
             this.accordionControlElementProfile.Text = "Profile";
             this.accordionControlElementProfile.Click += new System.EventHandler(this.accordionControlElementProfile_Click);
             // 
+            // accordionControlSeparator1
+            // 
+            this.accordionControlSeparator1.Height = 25;
+            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+            // 
+            // accordionControlElementHistory
+            // 
+            this.accordionControlElementHistory.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.accordionControlElementHistory.Appearance.Default.Options.UseFont = true;
+            this.accordionControlElementHistory.ImageOptions.SvgImage = global::mytask_.Properties.Resources.History;
+            this.accordionControlElementHistory.Name = "accordionControlElementHistory";
+            this.accordionControlElementHistory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementHistory.Text = "History";
+            this.accordionControlElementHistory.Click += new System.EventHandler(this.accordionControlElementHistory_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -256,6 +275,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNewTask;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementNotes;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementTasks;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementHistory;
     }
 }
 
