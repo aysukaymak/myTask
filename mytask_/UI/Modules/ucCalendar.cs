@@ -47,6 +47,7 @@ namespace mytask_.UI.Modules
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter($"select id, header, note as content, date as start_date, date as end_date " +
                                                    $"from notes " +
+                                                   $"where user_id = {userId}" +
                                                    $"union " +
                                                    $"select id, header, task as content, start_date, end_date " +
                                                    $"from tasks " +
