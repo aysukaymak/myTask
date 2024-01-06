@@ -38,7 +38,27 @@ namespace mytask_.UI.Modules
             save.Parameters.AddWithValue("@end_date", DateTime.Parse(dateEditEnd.Text));
             save.ExecuteNonQuery();
             connection_.Connection_().Close();
+            log("added new task");
             refresh_items();
+        }
+
+        private void log(string op)
+        {
+            try
+            {
+                SqlCommand log = new SqlCommand("insert into history (user_id, header, date, operation) " +
+                                 "values (@user_id, @header, @date, @operation)", connection_.Connection_());
+                log.Parameters.AddWithValue("@user_id", userId);
+                log.Parameters.AddWithValue("@header", richTextBoxHeader.Text);
+                log.Parameters.AddWithValue("@date", (DateTime.Now).ToString("MM.dd.yyyy"));
+                log.Parameters.AddWithValue("@operation", op);
+                log.ExecuteNonQuery();
+                connection_.Connection_().Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)

@@ -34,7 +34,7 @@ namespace mytask_.UI.Modules
             save.Parameters.AddWithValue("@date",  (DateTime.Now).ToString("MM.dd.yyyy"));
             save.ExecuteNonQuery();
             connection_.Connection_().Close();
-            log("add");
+            log("added new note");
             refresh_items();
         }
 

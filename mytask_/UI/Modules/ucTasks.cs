@@ -116,6 +116,37 @@ namespace mytask_.UI.Modules
                 set_enable_text(false);
         }
 
+        private void log(string op)
+        {
+            try
+            {
+                string header = string.Empty;
+
+                SqlCommand command = new SqlCommand($"select header from tasks where id = @id", connection_.Connection_()); //change user_id value after completed users and login tables
+                command.Parameters.AddWithValue("@id", labelid.Text);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    header = reader["header"].ToString();
+                }
+                reader.Close();
+
+                SqlCommand log = new SqlCommand("insert into history (user_id, header, date, operation) " +
+                                 "values (@user_id, @header, @date, @operation)", connection_.Connection_());
+                log.Parameters.AddWithValue("@user_id", userId);
+                log.Parameters.AddWithValue("@header", header);
+                log.Parameters.AddWithValue("@date", (DateTime.Now).ToString("MM.dd.yyyy"));
+                log.Parameters.AddWithValue("@operation", op);
+                log.ExecuteNonQuery();
+                connection_.Connection_().Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         private void buttonDiscard_Click(object sender, EventArgs e)
         {
             //if discord button is clicked, discard the changes
@@ -136,6 +167,7 @@ namespace mytask_.UI.Modules
             update.Parameters.AddWithValue("@id", labelid.Text);
             update.ExecuteNonQuery();
             connection_.Connection_().Close();
+            log("updated task");
             list_task(); //after updating, new data should be listing in tileview
             set_enable_text(false); //and again unenable the fields
         }
@@ -143,6 +175,7 @@ namespace mytask_.UI.Modules
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             //if delete button is clicked, delete the data
+            log("deleted task");
             SqlCommand delete = new SqlCommand("delete from tasks where id=@id", connection_.Connection_());
             delete.Parameters.AddWithValue("@id", labelid.Text);
             delete.ExecuteNonQuery();
