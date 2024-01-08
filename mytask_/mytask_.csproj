@@ -111,6 +111,12 @@
     <Compile Include="UI\Modules\ucCalendar.Designer.cs">
       <DependentUpon>ucCalendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Modules\ucHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Modules\ucHistory.Designer.cs">
+      <DependentUpon>ucHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Modules\ucNewNote.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="UI\Modules\ucCalendar.resx">
       <DependentUpon>ucCalendar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Modules\ucHistory.resx">
+      <DependentUpon>ucHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Modules\ucNewNote.resx">
       <DependentUpon>ucNewNote.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +213,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\9d74fc74-26b3-4473-b644-4d1ba991186c.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

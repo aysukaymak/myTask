@@ -156,18 +156,18 @@ namespace mytask_.UI.Modules
             update.Parameters.AddWithValue("@id", labelid.Text);
             update.ExecuteNonQuery();
             connection_.Connection_().Close();
-            log("update");
+            log("updated note");
             list_notes(); //after updating, new data should be listing in tileview
             set_enable_text(false); //and again unenable the fields
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            log("deleted note");
             SqlCommand delete = new SqlCommand("delete from notes where id=@id", connection_.Connection_());
             delete.Parameters.AddWithValue("@id", labelid.Text);
             delete.ExecuteNonQuery();
             connection_.Connection_().Close();
-            log("delete");
             list_notes(); //after deleting, tileview list must be refresh
             set_enable_text(false);
             set_initial_texts(); //and new first row displaying in the fields of form
